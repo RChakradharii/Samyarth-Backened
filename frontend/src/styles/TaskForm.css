@@ -1,0 +1,47 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {  /* Added select styling for priority dropdown */
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.task-form button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #0056b3;
+}
+
+/* Styling for the priority select box */
+.task-form select {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Optional: Add some styling for task form input elements on focus */
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}

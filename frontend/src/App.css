@@ -1,0 +1,71 @@
+/* Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('C:\Samyarth-Backend\Samyarth-Backened\frontend\public\react mast.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed;
+}
+
+/* Main app container centered */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Card styling */
+.app-container {
+  background-color: rgba(238, 131, 131, 0.9); /* White with transparency */
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 8px black; /* Shadow for card */
+  border: 2px solid #110f0f; /* Light gray border */
+  text-align: center;
+
+}
+
+/* Task Manager Title */
+.app-container h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Input fields and textarea */
+.app-container input,
+.app-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Button styling */
+.app-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.app-container button:hover {
+  background-color: #0056b3;
+}
