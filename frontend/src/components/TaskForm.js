@@ -4,15 +4,19 @@ import "./../styles/TaskForm.css";
 const TaskForm = ({ addTask }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [priority, setPriority] = useState("Medium"); // Default priority
+  const [priority, setPriority] = useState("Medium"); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title || !description) return alert("Both fields are required!");
-    addTask({ title, description, priority }); // Pass priority to the addTask function
+    
+    
+    addTask({ title, description, priority }); 
+
+    
     setTitle("");
     setDescription("");
-    setPriority("Medium"); // Reset priority after task submission
+    setPriority("Medium");
   };
 
   return (
@@ -26,13 +30,19 @@ const TaskForm = ({ addTask }) => {
       <textarea
         placeholder="Task Description"
         value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      ></textarea>
-      <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+        onChange={(e) => setDescription(e.target.value)}>
+      </textarea>
+
+
+      <select
+        value={priority}
+        onChange={(e) => setPriority(e.target.value)}
+      >
         <option value="High">High</option>
         <option value="Medium">Medium</option>
         <option value="Low">Low</option>
       </select>
+
       <button type="submit">Add Task</button>
     </form>
   );

@@ -11,52 +11,54 @@ body {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   position: fixed;
+  left: 30%;
 }
 
 /* Main app container centered */
+/* Outer App Styling */
 .app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100%;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  /* background-color: #d12b2b; */
 }
 
-/* Card styling */
+/* Main Container for Form */
 .app-container {
-  background-color: rgba(238, 131, 131, 0.9); /* White with transparency */
+  background-color: rgba(238, 131, 131, 0.9);
   width: 600px;
-  height: 400px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 10px 8px black; /* Shadow for card */
-  border: 2px solid #110f0f; /* Light gray border */
+  box-shadow: 0 10px 8px black;
   text-align: center;
-
+  margin-bottom: 20px; /* Add spacing between app-container and tasks */
 }
 
-/* Task Manager Title */
+/* Title Styling */
 .app-container h2 {
-  margin-top: 0;
+  margin: 0 0 20px 0;
   font-size: 24px;
   color: #333;
-  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-/* Input fields and textarea */
-.app-container input,
-.app-container textarea {
+/* Form Styling */
+.task-form input,
+.task-form textarea,
+.task-form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box;
   font-size: 14px;
 }
 
-/* Button styling */
-.app-container button {
+.task-form button {
   background-color: #007bff;
   color: white;
   padding: 10px 15px;
@@ -66,6 +68,60 @@ body {
   font-size: 16px;
 }
 
-.app-container button:hover {
+.task-form button:hover {
   background-color: #0056b3;
+}
+
+/* Task List Styling (Inside app-container but outside the form) */
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Space between tasks */
+  justify-content: center;
+  width: 100%; /* Tasks span across full width */
+}
+
+/* Individual Task Items */
+.task-item {
+  background-color: #f9f9f9;
+  width: 300px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.task-item h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.task-item p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.task-item .delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-item .delete-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .task-item {
+    width: 100%; /* Full width on smaller screens */
+  }
 }
