@@ -1,21 +1,24 @@
-import React from "react";
 import TaskItem from "./TaskItem"; // TaskItem ko import karte hain
-import "./../styles/TaskList.css";
+
 
 const TaskList = ({ tasks, deleteTask, editTask }) => {
+  const priorityOrder = { High: 1, Medium: 2, Low: 3 };
+  const sortedTasks = [...tasks].sort(
+    (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]
+  );
+
   return (
     <div className="task-list">
-      {tasks.map((task) => (
+      {sortedTasks.map((task) => (
         <TaskItem
           key={task._id}
           task={task}
           deleteTask={deleteTask}
-          editTask={editTask}  // Pass editTask to TaskItem
+          editTask={editTask}
         />
       ))}
     </div>
   );
 };
-
 
 export default TaskList;

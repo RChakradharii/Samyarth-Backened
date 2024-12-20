@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "../src/axios/api";
+import axios from "../src/axios/axiosInstance";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import "./App.css";
