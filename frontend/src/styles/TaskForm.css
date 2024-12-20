@@ -1,0 +1,85 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select { /* Added select styling for priority dropdown */
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.task-form button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #0056b3;
+}
+
+/* Styling for the priority select box */
+.task-form select {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Optional: Add some styling for task form input elements on focus */
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .task-form {
+    gap: 8px; /* Reduce gap for smaller screens */
+  }
+
+  .task-form input,
+  .task-form textarea,
+  .task-form select {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 8px;
+  }
+
+  .task-form button {
+    font-size: 14px; /* Smaller font size for button */
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-form {
+    gap: 5px; /* Further reduce gap for very small screens */
+  }
+
+  .task-form input,
+  .task-form textarea,
+  .task-form select {
+    font-size: 12px; /* Smaller font size for very small screens */
+    padding: 6px;
+  }
+
+  .task-form button {
+    font-size: 12px; /* Further reduce button font size */
+    padding: 6px;
+    width: 100%; /* Make button full-width */
+  }
+}

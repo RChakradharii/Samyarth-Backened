@@ -1,0 +1,104 @@
+.task-item {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.task-item h3 {
+  margin: 0 0 10px 0;
+}
+
+.task-item .priority {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.task-item .delete-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-item .delete-btn:hover {
+  background: #cc0000;
+}
+
+/* Task Item Priority */
+.priority {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .task-item {
+    padding: 12px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .task-item h3 {
+    font-size: 16px; /* Reduce heading font size */
+  }
+
+  .task-item .priority {
+    font-size: 12px; /* Smaller font for priority badge */
+    padding: 4px 8px; /* Adjust padding */
+  }
+
+  .task-item .delete-btn {
+    font-size: 12px; /* Reduce button font size */
+    padding: 4px 8px; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .task-item {
+    padding: 10px; /* Further reduce padding for very small screens */
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .task-item h3 {
+    font-size: 14px; /* Further reduce heading size */
+  }
+
+  .task-item .priority {
+    font-size: 10px; /* Smaller font for priority badge */
+    padding: 3px 6px; /* Compact padding */
+    top: 5px; /* Adjust position for better fit */
+    right: 5px;
+  }
+
+  .task-item .delete-btn {
+    font-size: 10px; /* Further reduce button font size */
+    padding: 3px 6px; /* Compact button padding */
+  }
+}
+
+.edit-btn {
+  background-color: #ffb84d;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn:hover {
+  background-color: #e69500;
+}
